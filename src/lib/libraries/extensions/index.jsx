@@ -105,7 +105,7 @@ export default [
                 id="gui.extension.ace.name"
             />
         ),
-        extensionId: "ace", // *** these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
+        extensionId: "ace", // **** these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
         iconURL: aceDeviceExtension,
 
         description: (
