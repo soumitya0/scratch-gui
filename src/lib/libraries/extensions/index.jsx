@@ -50,6 +50,9 @@ import newBlockImage from "./newBlock/newblock.png";
 import newBlockButtonImage from "./newBlock/newblocks-small.png";
 import ternIconURL from "./tern/tern.png";
 
+import aceDeviceExtension from "./ace/aceDeviceExtension.png";
+
+import humanoidDeviceExtension from "./humanoid/humanoidDeviceExtension.png";
 export default [
     {
         name: "NewBlocks",
@@ -71,6 +74,7 @@ export default [
         helpLink: "https://scratch.mit.edu/wedo",
     },
 
+    // tern
     {
         name: (
             <FormattedMessage
@@ -92,6 +96,51 @@ export default [
         featured: true,
     },
 
+    // ACE
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="BISOFT ACE"
+                description="Name for the 'ACE' extension"
+                id="gui.extension.ace.name"
+            />
+        ),
+        extensionId: "ace", // these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
+        iconURL: aceDeviceExtension,
+
+        description: (
+            <FormattedMessage
+                defaultMessage="Bisoft ACE Description"
+                description="Description for the 'ACE' extension"
+                id="gui.extension.ace.description"
+            />
+        ),
+        featured: true,
+    },
+
+    // humanoid
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="BISOFT HUMANOID"
+                description="Name for the 'HUMANOID' extension"
+                id="gui.extension.humanoid.name"
+            />
+        ),
+        extensionId: "humanoid", // these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
+        iconURL: humanoidDeviceExtension,
+
+        description: (
+            <FormattedMessage
+                defaultMessage="Bisoft HUMANOID Description"
+                description="Description for the 'HUMANOID' extension"
+                id="gui.extension.humanoid.description"
+            />
+        ),
+        featured: true,
+    },
+
+    // music
     {
         name: (
             <FormattedMessage
