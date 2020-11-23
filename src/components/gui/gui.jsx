@@ -259,7 +259,7 @@ const GUIComponent = (props) => {
                                         }
                                         onSelect={onActivateTab}
                                     >
-                                        {/* TABLIST  */}
+                                        {/* ★ TABLIST ★ */}
                                         <TabList
                                             className={tabClassNames.tabList}
                                         >
