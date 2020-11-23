@@ -317,7 +317,7 @@ const GUIComponent = (props) => {
                                             </Tab> */}
                                         </TabList>
 
-                                        {/* ★ EXTENSIONN DEVICE ★ WATERMARK  ★ CODE CONTAINER */}
+                                        {/* ★ EXTENSIONN DEVICE ★ WATERMARK  ★ CODE CONTAINER ★ */}
                                         <TabPanel
                                             className={tabClassNames.tabPanel}
                                             style={{
