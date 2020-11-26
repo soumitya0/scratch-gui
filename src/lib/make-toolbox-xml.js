@@ -181,40 +181,10 @@ const events = function (isInitialSetup, isStage) {
     return `
     <category name="%{BKY_CATEGORY_EVENTS}" id="events" colour="#FFD500" secondaryColour="#CC9900">
         <block type="event_whenflagclicked"/>
-        <block type="event_whenkeypressed">
-        </block>
-        ${
-            isStage
-                ? `
-            <block type="event_whenstageclicked"/>
-        `
-                : `
-            <block type="event_whenthisspriteclicked"/>
-        `
-        }
-        <block type="event_whenbackdropswitchesto">
-        </block>
-        ${blockSeparator}
-        <block type="event_whengreaterthan">
-            <value name="VALUE">
-                <shadow type="math_number">
-                    <field name="NUM">10</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="event_whenbroadcastreceived">
-        </block>
-        <block type="event_broadcast">
-            <value name="BROADCAST_INPUT">
-                <shadow type="event_broadcast_menu"></shadow>
-            </value>
-        </block>
-        <block type="event_broadcastandwait">
-            <value name="BROADCAST_INPUT">
-              <shadow type="event_broadcast_menu"></shadow>
-            </value>
-        </block>
+       
+        
+
+        
         ${categorySeparator}
     </category>
     `;
@@ -245,27 +215,9 @@ const control = function (isInitialSetup, isStage) {
         <block id="wait_until" type="control_wait_until"/>
         <block id="repeat_until" type="control_repeat_until"/>
         ${blockSeparator}
-        <block type="control_stop"/>
+    
         ${blockSeparator}
-        ${
-            isStage
-                ? `
-            <block type="control_create_clone_of">
-                <value name="CLONE_OPTION">
-                    <shadow type="control_create_clone_of_menu"/>
-                </value>
-            </block>
-        `
-                : `
-            <block type="control_start_as_clone"/>
-            <block type="control_create_clone_of">
-                <value name="CLONE_OPTION">
-                    <shadow type="control_create_clone_of_menu"/>
-                </value>
-            </block>
-            <block type="control_delete_this_clone"/>
-        `
-        }
+        
         ${categorySeparator}
     </category>
     `;
@@ -282,11 +234,7 @@ const sensing = function (isInitialSetup, isStage) {
             isStage
                 ? ""
                 : `
-            <block type="sensing_touchingobject">
-                <value name="TOUCHINGOBJECTMENU">
-                    <shadow type="sensing_touchingobjectmenu"/>
-                </value>
-            </block>
+            
             <block type="sensing_touchingcolor">
                 <value name="COLOR">
                     <shadow type="colour_picker"/>
@@ -300,62 +248,22 @@ const sensing = function (isInitialSetup, isStage) {
                     <shadow type="colour_picker"/>
                 </value>
             </block>
-            <block type="sensing_distanceto">
-                <value name="DISTANCETOMENU">
-                    <shadow type="sensing_distancetomenu"/>
-                </value>
-            </block>
+
+            
+            
             ${blockSeparator}
         `
         }
-        ${
-            isInitialSetup
-                ? ""
-                : `
-            <block id="askandwait" type="sensing_askandwait">
-                <value name="QUESTION">
-                    <shadow type="text">
-                        <field name="TEXT">${name}</field>
-                    </shadow>
-                </value>
-            </block>
-        `
-        }
-        <block id="answer" type="sensing_answer"/>
+        
         ${blockSeparator}
-        <block type="sensing_keypressed">
-            <value name="KEY_OPTION">
-                <shadow type="sensing_keyoptions"/>
-            </value>
-        </block>
-        <block type="sensing_mousedown"/>
-        <block type="sensing_mousex"/>
-        <block type="sensing_mousey"/>
-        ${
-            isStage
-                ? ""
-                : `
-            ${blockSeparator}
-            '<block type="sensing_setdragmode" id="sensing_setdragmode"></block>'+
-            ${blockSeparator}
-        `
-        }
+        
+        
         ${blockSeparator}
-        <block id="loudness" type="sensing_loudness"/>
         ${blockSeparator}
-        <block id="timer" type="sensing_timer"/>
-        <block type="sensing_resettimer"/>
         ${blockSeparator}
-        <block id="of" type="sensing_of">
-            <value name="OBJECT">
-                <shadow id="sensing_of_object_menu" type="sensing_of_object_menu"/>
-            </value>
-        </block>
+       
         ${blockSeparator}
-        <block id="current" type="sensing_current"/>
-        <block type="sensing_dayssince2000"/>
         ${blockSeparator}
-        <block type="sensing_username"/>
         ${categorySeparator}
     </category>
     `;
@@ -479,83 +387,12 @@ const operators = function (isInitialSetup) {
         <block type="operator_or"/>
         <block type="operator_not"/>
         ${blockSeparator}
-        ${
-            isInitialSetup
-                ? ""
-                : `
-            <block type="operator_join">
-                <value name="STRING1">
-                    <shadow type="text">
-                        <field name="TEXT">${apple} </field>
-                    </shadow>
-                </value>
-                <value name="STRING2">
-                    <shadow type="text">
-                        <field name="TEXT">${banana}</field>
-                    </shadow>
-                </value>
-            </block>
-            <block type="operator_letter_of">
-                <value name="LETTER">
-                    <shadow type="math_whole_number">
-                        <field name="NUM">1</field>
-                    </shadow>
-                </value>
-                <value name="STRING">
-                    <shadow type="text">
-                        <field name="TEXT">${apple}</field>
-                    </shadow>
-                </value>
-            </block>
-            <block type="operator_length">
-                <value name="STRING">
-                    <shadow type="text">
-                        <field name="TEXT">${apple}</field>
-                    </shadow>
-                </value>
-            </block>
-            <block type="operator_contains" id="operator_contains">
-              <value name="STRING1">
-                <shadow type="text">
-                  <field name="TEXT">${apple}</field>
-                </shadow>
-              </value>
-              <value name="STRING2">
-                <shadow type="text">
-                  <field name="TEXT">${letter}</field>
-                </shadow>
-              </value>
-            </block>
-        `
-        }
+      
         ${blockSeparator}
-        <block type="operator_mod">
-            <value name="NUM1">
-                <shadow type="math_number">
-                    <field name="NUM"/>
-                </shadow>
-            </value>
-            <value name="NUM2">
-                <shadow type="math_number">
-                    <field name="NUM"/>
-                </shadow>
-            </value>
-        </block>
-        <block type="operator_round">
-            <value name="NUM">
-                <shadow type="math_number">
-                    <field name="NUM"/>
-                </shadow>
-            </value>
-        </block>
+      
+        
         ${blockSeparator}
-        <block type="operator_mathop">
-            <value name="NUM">
-                <shadow type="math_number">
-                    <field name="NUM"/>
-                </shadow>
-            </value>
-        </block>
+        
         ${categorySeparator}
     </category>
     `;
@@ -573,17 +410,17 @@ const variables = function () {
     `;
 };
 
-const myBlocks = function () {
-    return `
-    <category
-        name="%{BKY_CATEGORY_MYBLOCKS}"
-        id="myBlocks"
-        colour="#FF6680"
-        secondaryColour="#FF4D6A"
-        custom="PROCEDURE">
-    </category>
-    `;
-};
+// const myBlocks = function () {
+//     return `
+//     <category
+//         name="%{BKY_CATEGORY_MYBLOCKS}"
+//         id="myBlocks"
+//         colour="#FF6680"
+//         secondaryColour="#FF4D6A"
+//         custom="PROCEDURE">
+//     </category>
+//     `;
+// };
 /* eslint-enable no-unused-vars */
 
 const xmlOpen = '<xml style="display: none">';
@@ -651,9 +488,9 @@ const makeToolboxXML = function (
         operators(isInitialSetup, isStage, targetId);
     const variablesXML =
         moveCategory("data") || variables(isInitialSetup, isStage, targetId);
-    const myBlocksXML =
-        moveCategory("procedures") ||
-        myBlocks(isInitialSetup, isStage, targetId);
+    // const myBlocksXML =
+    //     moveCategory("procedures") ||
+    //     myBlocks(isInitialSetup, isStage, targetId);
 
     const everything = [
         xmlOpen,
@@ -673,7 +510,7 @@ const makeToolboxXML = function (
         gap,
         variablesXML,
         gap,
-        myBlocksXML,
+        // myBlocksXML,
     ];
 
     for (const extensionCategory of categoriesXML) {
