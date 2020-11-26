@@ -208,7 +208,7 @@ const GUIComponent = (props) => {
                             />
                         ) : null}
 
-                        {/* ★ TOP MENU BAR ★ */}
+                        {/* ★★ TOP MENU BAR  ★★ */}
                         <MenuBar
                             accountNavOpen={accountNavOpen}
                             authorId={authorId}
