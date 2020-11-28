@@ -10,7 +10,6 @@ import Divider from "../divider/divider.jsx";
 import Filter from "../filter/filter.jsx";
 import TagButton from "../../containers/tag-button.jsx";
 import Spinner from "../spinner/spinner.jsx";
-
 import styles from "./library.css";
 
 const messages = defineMessages({
@@ -220,6 +219,7 @@ class LibraryComponent extends React.Component {
                                         /* console.log(tagProps);
                                         console.log(this.props.tags); */
 
+                                        /* here menu are add ART,MUSICE, GAMES */
                                         <TagButton
                                             active={
                                                 this.state.selectedTag ===
@@ -246,7 +246,7 @@ class LibraryComponent extends React.Component {
                     })}
                     ref={this.setFilteredDataRef}
                 >
-                    {this.state.loaded ? (
+                    {/* {this.state.loaded ? (
                         this.getFilteredData().map((dataItem, index) => (
                             <LibraryItem
                                 bluetoothRequired={dataItem.bluetoothRequired}
@@ -285,7 +285,25 @@ class LibraryComponent extends React.Component {
                         <div className={styles.spinnerWrapper}>
                             <Spinner large level="primary" />
                         </div>
-                    )}
+                    )} */}
+
+                    <iframe
+                        width="420"
+                        height="345"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                    ></iframe>
+
+                    <iframe
+                        width="420"
+                        height="345"
+                        src="https://www.youtube.com/embed/cLuUP-hl0YI"
+                    ></iframe>
+
+                    <iframe
+                        width="420"
+                        height="345"
+                        src="https://www.youtube.com/embed/P-bamOO-MzY"
+                    ></iframe>
                 </div>
             </Modal>
         );
