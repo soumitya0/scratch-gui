@@ -160,6 +160,7 @@ class LibraryComponent extends React.Component {
                         .indexOf(this.state.filterQuery.toLowerCase()) !== -1
             );
         }
+
         return this.props.data.filter(
             (dataItem) =>
                 dataItem.tags &&
@@ -246,64 +247,62 @@ class LibraryComponent extends React.Component {
                     })}
                     ref={this.setFilteredDataRef}
                 >
-                    {/* {this.state.loaded ? (
-                        this.getFilteredData().map((dataItem, index) => (
-                            <LibraryItem
-                                bluetoothRequired={dataItem.bluetoothRequired}
-                                collaborator={dataItem.collaborator}
-                                description={dataItem.description}
-                                disabled={dataItem.disabled}
-                                extensionId={dataItem.extensionId}
-                                featured={dataItem.featured}
-                                hidden={dataItem.hidden}
-                                iconMd5={
-                                    dataItem.costumes
-                                        ? dataItem.costumes[0].md5ext
-                                        : dataItem.md5ext
-                                }
-                                iconRawURL={dataItem.rawURL}
-                                icons={dataItem.costumes}
-                                id={index}
-                                insetIconURL={dataItem.insetIconURL}
-                                internetConnectionRequired={
-                                    dataItem.internetConnectionRequired
-                                }
-                                isPlaying={this.state.playingItem === index}
-                                key={
-                                    typeof dataItem.name === "string"
-                                        ? dataItem.name
-                                        : dataItem.rawURL
-                                }
-                                name={dataItem.name}
-                                showPlayButton={this.props.showPlayButton}
-                                onMouseEnter={this.handleMouseEnter}
-                                onMouseLeave={this.handleMouseLeave}
-                                onSelect={this.handleSelect}
-                            />
-                        ))
+                    {this.state.loaded ? (
+                        this.getFilteredData().map(
+                            (dataItem, index) => (
+                                console.log(
+                                    dataItem.name,
+                                    "dataItem.name 66 \n ************ \n",
+                                    dataItem,
+                                    "dataItem"
+                                ),
+                                (
+                                    <LibraryItem
+                                        bluetoothRequired={
+                                            dataItem.bluetoothRequired
+                                        }
+                                        collaborator={dataItem.collaborator}
+                                        description={dataItem.description}
+                                        disabled={dataItem.disabled}
+                                        extensionId={dataItem.extensionId}
+                                        featured={dataItem.featured}
+                                        hidden={dataItem.hidden}
+                                        iconMd5={
+                                            dataItem.costumes
+                                                ? dataItem.costumes[0].md5ext
+                                                : dataItem.md5ext
+                                        }
+                                        iconRawURL={dataItem.rawURL}
+                                        icons={dataItem.costumes}
+                                        id={index}
+                                        insetIconURL={dataItem.insetIconURL}
+                                        internetConnectionRequired={
+                                            dataItem.internetConnectionRequired
+                                        }
+                                        isPlaying={
+                                            this.state.playingItem === index
+                                        }
+                                        key={
+                                            typeof dataItem.name === "string"
+                                                ? dataItem.name
+                                                : dataItem.rawURL
+                                        }
+                                        name={dataItem.name}
+                                        showPlayButton={
+                                            this.props.showPlayButton
+                                        }
+                                        onMouseEnter={this.handleMouseEnter}
+                                        onMouseLeave={this.handleMouseLeave}
+                                        onSelect={this.handleSelect}
+                                    />
+                                )
+                            )
+                        )
                     ) : (
                         <div className={styles.spinnerWrapper}>
                             <Spinner large level="primary" />
                         </div>
-                    )} */}
-
-                    <iframe
-                        width="420"
-                        height="345"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                    ></iframe>
-
-                    <iframe
-                        width="420"
-                        height="345"
-                        src="https://www.youtube.com/embed/cLuUP-hl0YI"
-                    ></iframe>
-
-                    <iframe
-                        width="420"
-                        height="345"
-                        src="https://www.youtube.com/embed/P-bamOO-MzY"
-                    ></iframe>
+                    )}
                 </div>
             </Modal>
         );

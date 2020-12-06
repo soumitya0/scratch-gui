@@ -81,6 +81,8 @@ class TipsLibrary extends React.PureComponent {
                 hidden: decksLibraryContent[id].hidden || false,
             }));
 
+        console.log(decksLibraryContent, "decksLibraryContent 2.0");
+
         if (!this.props.visible) return null;
         return (
             <LibraryComponent
