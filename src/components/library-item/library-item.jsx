@@ -76,7 +76,6 @@ class LibraryItemComponent extends React.PureComponent {
                             )}
                             onClick={this.props.onClick}
                         >
-                            <h1>soumitya</h1>
                             <div className={styles.featuredImageContainer}>
                                 {this.props.disabled ? (
                                     <div className={styles.comingSoonText}>
@@ -87,7 +86,6 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                 ) : null}
-                                <h1>soumitya 2.0</h1>
 
                                 <img
                                     className={styles.featuredImage}
@@ -100,8 +98,6 @@ class LibraryItemComponent extends React.PureComponent {
                                         styles.libraryItemInsetImageContainer
                                     }
                                 >
-                                    <h1>soumitya 3.0</h1>
-
                                     <img
                                         className={styles.libraryItemInsetImage}
                                         src={this.props.insetIconURL}
@@ -119,7 +115,6 @@ class LibraryItemComponent extends React.PureComponent {
                                         : styles.featuredText
                                 }
                             >
-                                <h1>soumitya 4.0</h1>
                                 <span className={styles.libraryItemName}>
                                     {this.props.name} Rahul
                                 </span>
@@ -252,7 +247,6 @@ class LibraryItemComponent extends React.PureComponent {
                                         : null
                                 }
                             >
-                                <h1>soumitya 7.0</h1>
                                 <img
                                     className={styles.libraryItemImage}
                                     src={this.props.iconURL}
