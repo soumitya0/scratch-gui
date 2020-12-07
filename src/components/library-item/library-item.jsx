@@ -31,9 +31,9 @@ class LibraryItemComponent extends React.PureComponent {
             videoLinkTutorials = this.props.name.props.videoLinks;
         }
 
-        console.log(myObj, "rahul");
+        console.log(myObj, "myObj ");
 
-        console.log(videoLinkTutorials, "rahul");
+        console.log(videoLinkTutorials, "videoLinkTutorials data");
 
         // console.log(this.props);
 
@@ -116,9 +116,9 @@ class LibraryItemComponent extends React.PureComponent {
                                 }
                             >
                                 <span className={styles.libraryItemName}>
-                                    {this.props.name} Rahul
+                                    {this.props.name}
                                 </span>
-                                {/* {this.props.name} Rahul */}
+                                {/* {this.props.name}  */}
 
                                 {/* <p> {JSON.stringify(this.props.name)}</p> */}
 
