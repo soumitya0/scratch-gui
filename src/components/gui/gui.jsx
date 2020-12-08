@@ -320,9 +320,6 @@ const GUIComponent = (props) => {
                                         {/* ★ EXTENSIONN DEVICE ★ WATERMARK  ★ CODE CONTAINER ★ */}
                                         <TabPanel
                                             className={tabClassNames.tabPanel}
-                                            style={{
-                                                border: "2px solid red",
-                                            }}
                                         >
                                             <Box
                                                 className={styles.blocksWrapper}

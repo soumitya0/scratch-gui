@@ -37,6 +37,7 @@ class LibraryItemComponent extends React.PureComponent {
 
         // console.log(this.props);
 
+        console.log(styles.featuredImage, "styles.featuredImage 22");
         return (
             <>
                 {typeof this.props.extensionId === "undefined"
@@ -90,6 +91,9 @@ class LibraryItemComponent extends React.PureComponent {
                                 <img
                                     className={styles.featuredImage}
                                     src={this.props.iconURL}
+                                    style={{
+                                        border: "1px solid red",
+                                    }}
                                 />
                             </div>
                             {this.props.insetIconURL ? (
