@@ -403,7 +403,7 @@ const variables = function () {
     <category
         name="%{BKY_CATEGORY_VARIABLES}"
         id="variables"
-        colour="#FF8C1A"
+        colour="#a20a0a"
         secondaryColour="#DB6E00"
         custom="VARIABLE">
     </category>
