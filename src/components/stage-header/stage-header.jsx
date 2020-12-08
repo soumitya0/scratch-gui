@@ -98,6 +98,7 @@ const StageHeaderComponent = function (props) {
                     className={styles.stageMenuWrapper}
                     style={{ width: stageDimensions.width }}
                 >
+                    {/* ★★ Green Flag and Stop Button ★★ */}
                     <Controls vm={vm} />
                     {stageButton}
                 </Box>
