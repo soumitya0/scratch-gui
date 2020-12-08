@@ -401,24 +401,32 @@ const GUIComponent = (props) => {
                                     ) : null} */}
                                 </Box>
 
-                                {/* ★ REMOVED  RIGHT SIDE OF ANAMATIONS ★ */}
-                                {/* 
-                        <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
-                            <StageWrapper
-                                isFullScreen={isFullScreen}
-                                isRendererSupported={isRendererSupported}
-                                isRtl={isRtl}
-                                stageSize={stageSize}
-                                vm={vm}
-                            />
-                            <Box className={styles.targetWrapper}>
-                                <TargetPane
-                                    stageSize={stageSize}
-                                    vm={vm}
-                                />
-                            </Box>
-                        </Box>
-                    */}
+                                {/* ★ REMOVED  RIGHT SIDE OF ANAMATIONS and SPRITE SCREEN ★ */}
+
+                                <Box
+                                    className={classNames(
+                                        styles.stageAndTargetWrapper,
+                                        styles[stageSize]
+                                    )}
+                                >
+                                    <StageWrapper
+                                        isFullScreen={isFullScreen}
+                                        isRendererSupported={
+                                            isRendererSupported
+                                        }
+                                        isRtl={isRtl}
+                                        stageSize={stageSize}
+                                        vm={vm}
+                                    />
+                                    {/* ★ REMOVED  RIGHT SIDE OF SPRITE SCREEN ★ */}
+
+                                    {/* <Box className={styles.targetWrapper}>
+                                        <TargetPane
+                                            stageSize={stageSize}
+                                            vm={vm}
+                                        />
+                                    </Box> */}
+                                </Box>
                             </Box>
                         </Box>
                         <DragLayer />
