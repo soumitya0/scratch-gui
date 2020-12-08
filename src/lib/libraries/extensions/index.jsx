@@ -54,31 +54,12 @@ import aceDeviceExtension from "./ace/aceDeviceExtension.png";
 
 import humanoidDeviceExtension from "./humanoid/humanoidDeviceExtension.png";
 export default [
-    {
-        name: "NewBlocks",
-        extensionId: "newblocks",
-        collaborator: "Me",
-        iconURL: newBlockImage,
-        insetIconURL: newBlockButtonImage,
-        description: (
-            <FormattedMessage
-                defaultMessage="New blocks."
-                description="my block"
-                id="gui.extension.newblocks.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        internetConnectionRequired: true,
-        bluetoothRequired: false,
-        helpLink: "https://scratch.mit.edu/wedo",
-    },
-
+    // 【★　Added  BiBox block 】
     // tern
     {
         name: (
             <FormattedMessage
-                defaultMessage="BISOFT TERN"
+                defaultMessage="BiBox TERN"
                 description="Name for the 'TERN' extension"
                 id="gui.extension.tern.name"
             />
@@ -86,13 +67,13 @@ export default [
         extensionId: "tern", // these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
         iconURL: ternIconURL,
 
-        description: (
-            <FormattedMessage
-                defaultMessage="Bisoft TERN Description"
-                description="Description for the 'TERN' extension"
-                id="gui.extension.tern.description"
-            />
-        ),
+        // description: (
+        //     <FormattedMessage
+        //         defaultMessage="Bisoft TERN Description"
+        //         description="Description for the 'TERN' extension"
+        //         id="gui.extension.tern.description"
+        //     />
+        // ),
         featured: true,
     },
 
@@ -100,7 +81,7 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="BISOFT ACE"
+                defaultMessage="BiBox ACE"
                 description="Name for the 'ACE' extension"
                 id="gui.extension.ace.name"
             />
@@ -108,13 +89,13 @@ export default [
         extensionId: "ace", // **** these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
         iconURL: aceDeviceExtension,
 
-        description: (
-            <FormattedMessage
-                defaultMessage="Bisoft ACE Description"
-                description="Description for the 'ACE' extension"
-                id="gui.extension.ace.description"
-            />
-        ),
+        // description: (
+        //     <FormattedMessage
+        //         defaultMessage="Bisoft ACE Description"
+        //         description="Description for the 'ACE' extension"
+        //         id="gui.extension.ace.description"
+        //     />
+        // ),
         featured: true,
     },
 
@@ -122,7 +103,7 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="BISOFT HUMANOID"
+                defaultMessage="BiBox HUMANOID"
                 description="Name for the 'HUMANOID' extension"
                 id="gui.extension.humanoid.name"
             />
@@ -130,39 +111,40 @@ export default [
         extensionId: "humanoid", // these extensionId will match with the id that you have give in  scratch-vm bisoftTERN
         iconURL: humanoidDeviceExtension,
 
-        description: (
-            <FormattedMessage
-                defaultMessage="Bisoft HUMANOID Description"
-                description="Description for the 'HUMANOID' extension"
-                id="gui.extension.humanoid.description"
-            />
-        ),
+        // description: (
+        //     <FormattedMessage
+        //         defaultMessage="Bisoft HUMANOID Description"
+        //         description="Description for the 'HUMANOID' extension"
+        //         id="gui.extension.humanoid.description"
+        //     />
+        // ),
         featured: true,
     },
+
+    // 【★　Removed All the block 】
 
     // music
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Music"
-                description="Name for the 'Music' extension"
-                id="gui.extension.music.name"
-            />
-        ),
-        extensionId: "music",
-        iconURL: musicIconURL,
-        insetIconURL: musicInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Play instruments and drums."
-                description="Description for the 'Music' extension"
-                id="gui.extension.music.description"
-            />
-        ),
-        featured: true,
-    },
+    // {
+    //     name: (
+    //         <FormattedMessage
+    //             defaultMessage="Music"
+    //             description="Name for the 'Music' extension"
+    //             id="gui.extension.music.name"
+    //         />
+    //     ),
+    //     extensionId: "music",
+    //     iconURL: musicIconURL,
+    //     insetIconURL: musicInsetIconURL,
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Play instruments and drums."
+    //             description="Description for the 'Music' extension"
+    //             id="gui.extension.music.description"
+    //         />
+    //     ),
+    //     featured: true,
+    // },
 
-    // 【★　Removed All the block above】
     // {
     //     name: (
     //         <FormattedMessage
