@@ -59,7 +59,7 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="BiBox TERN"
+                defaultMessage="BIBOX TERN"
                 description="Name for the 'TERN' extension"
                 id="gui.extension.tern.name"
             />
@@ -75,13 +75,16 @@ export default [
         //     />
         // ),
         featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
     },
 
     // ACE
     {
         name: (
             <FormattedMessage
-                defaultMessage="BiBox ACE"
+                defaultMessage="BIBOX ACE"
                 description="Name for the 'ACE' extension"
                 id="gui.extension.ace.name"
             />
@@ -95,15 +98,19 @@ export default [
         //         description="Description for the 'ACE' extension"
         //         id="gui.extension.ace.description"
         //     />
-        // ),
+        // ),,
+
         featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
     },
 
     // humanoid
     {
         name: (
             <FormattedMessage
-                defaultMessage="BiBox HUMANOID"
+                defaultMessage="BIBOX HUMANOID"
                 description="Name for the 'HUMANOID' extension"
                 id="gui.extension.humanoid.name"
             />
@@ -118,7 +125,11 @@ export default [
         //         id="gui.extension.humanoid.description"
         //     />
         // ),
+
         featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
     },
 
     // 【★　Removed All the block 】

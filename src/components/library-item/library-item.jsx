@@ -38,6 +38,12 @@ class LibraryItemComponent extends React.PureComponent {
         // console.log(this.props);
 
         console.log(styles.featuredImage, "styles.featuredImage 22");
+        console.log(
+            styles.featuredImageContainer,
+            "styles.featuredImageContainer 55"
+        );
+
+        console.log(styles, "style");
         return (
             <>
                 {typeof this.props.extensionId === "undefined"
@@ -76,8 +82,18 @@ class LibraryItemComponent extends React.PureComponent {
                                 this.props.hidden ? styles.hidden : null
                             )}
                             onClick={this.props.onClick}
+                            // style={{
+                            //     border: "6px solid red",
+                            // }}
                         >
-                            <div className={styles.featuredImageContainer}>
+                            <div
+                                className={styles.featuredImageContainer}
+                                style={{
+                                    // border: "3px solid blue",
+                                    // width: "80%",
+                                    height: "90%",
+                                }}
+                            >
                                 {this.props.disabled ? (
                                     <div className={styles.comingSoonText}>
                                         <FormattedMessage
@@ -91,9 +107,9 @@ class LibraryItemComponent extends React.PureComponent {
                                 <img
                                     className={styles.featuredImage}
                                     src={this.props.iconURL}
-                                    style={{
-                                        border: "1px solid red",
-                                    }}
+                                    // style={{
+                                    //     border: "1px solid green",
+                                    // }}
                                 />
                             </div>
                             {this.props.insetIconURL ? (
